@@ -15,17 +15,11 @@
     font-family: "Helvetica", sans-serif;
   }
   
-  nav {
-    margin: auto;
-    font-family:'Work Sans';
-  }
-  
   pre {
     font-family: spaceMono;
   }
   
-  div,
-  nav, section {
+  div {
     box-shadow: 5px 5px 15px #000000;
   }
   
@@ -74,18 +68,5 @@
     font-size: 1.25rem;
     text-align: left;
     padding-top: 15px;
-  }
-  
-  #nav-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    max-width: 80%;
-    padding: 25px;
-    background-color: #4d48bd;
-    margin: 0 auto;
-    margin-bottom: 25px;
-    border: 5px #e2d5c0 solid;
   }
   
