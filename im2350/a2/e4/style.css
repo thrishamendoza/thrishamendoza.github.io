@@ -1,0 +1,190 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+
+/*Wanted to center the content towards the middle of the screen as it felt as though the original position 
+left little headroom and was not ustilising its surrounding area enough*/
+body {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  min-height: 90vh;
+  font-family: 'Nanum Pen Script', cursive;
+  background-color: var(--col-04);
+  background: radial-gradient(#e7abbf 1%, #d9ae8e);
+
+}
+/*This font was chosen for its handwritten appearance. As the audio and its context is meant for a user to study/relax, I had felt that using a font that looks as though a human had written onto the site makes for a more authentic and soft appearance.
+This choice of font also relates to the constant writing that comes along with having to study, which helps to stick closely to the theme/context.  */
+h1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+
+.attribution{
+  position: fixed;     
+  text-align: center;    
+  bottom: 10px; 
+  width: 100%;
+}
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+
+/*went for a more toned down colour pallette as the audio is used to study or relax, therefore i wanted to avoid using vibrant colours that may be distracting to the eyes.*/
+:root{
+  --col-01:#232220;
+  --col-02:#4e4c4f;
+  --col-03:#9f8d8d;
+  --col-04:#d9ae8e;
+  --col-05:#ffddba;
+  --col-06:#dddad4;
+  --border: 1px solid var(--col-02);
+}
+
+.audio-player-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* becuase I want to overlay the play icon on the audio they need to be in their own wrapper */
+.audio-element-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#audioElement{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+/*I opted for the border radius of my content to appear more rounded, it gives the overall site a softer look which coincides with the theme of relaxation and calmness this audio exudes*/
+#heroImage{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-radius: 18px;
+  padding-bottom: 10px;
+}
+
+#audioPlayOverlay{
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;   
+  pointer-events: none;
+}
+
+/*The loop overlay is meant to appear after the audio ends, it's semi successful as it does just as its meant to, however the loop also seems to appear when a user first enters/loads up the site.
+I tried to figure out how to solve this, though I found it difficult to find how i can fix it without affecting the surrounding code. It's frustrating as that is the only problem occuring with this
+function despite everything else working well.*/
+
+/*i implemented this loop image as a visual signifier for the user to restart the audio as it has ended, the only other previous sign was the pause button returning back to a play and the progress bar reaching
+the end of its line, this just makes an easier indication and choice for the user to click on.*/
+
+#audioLoopOverlay{
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;   
+  pointer-events: none;
+}
+
+
+.audio-controls-wrapper{
+  display: flex;
+  justify-content: center;
+}
+/* this overwrites the above display:flex - something which is then undone when the JS loads */
+#controlsWrapper{
+  display: none;
+}
+
+.audio-control-button{
+  width: 2rem;
+  height: 2rem;
+  padding: .3rem;
+  background-color: var(--col-06);
+  border: none;
+  cursor: pointer;
+}
+.audio-control-button:hover{
+  background-color: var(--col-05);
+}
+.audio-control-button:active{
+  background-color: var(--col-03);
+}
+.button-icon{
+  pointer-events: none;
+}
+
+#rewindButton{
+  background-image: url('./icons/rewind.svg');
+  border-radius: 15px 0 0 15px;
+}
+
+#playButton{
+  background-image: url('./icons/play.svg');
+}
+
+#forwardButton{
+  background-image: url('./icons/fastForward.svg');
+}
+
+#muteButton{
+  background-image: url('./icons/mute.svg');
+}
+
+.audio-progress-bar{
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 2rem;
+  flex-grow: 1;
+  cursor: pointer;
+}
+::-moz-progress-bar {
+  -moz-appearance: none;
+
+}
+
+::-webkit-progress-bar {
+  -webkit-appearance: none;
+  background: var(--col-03);
+  border-radius: 0 15px 15px 0;
+  height: 2rem;
+}
+::-webkit-progress-value {
+  background: var(--col-01);
+  border-radius: 0 15px 15px 0;
+
+}
+
+.timeline-loading{
+  background-image: -moz-repeating-linear-gradient(45deg, var(--col-03) 0% 2%, transparent 2% 4%, red 4%);
+  background-size: 200% 100%;
+  animation: loadingAnimation 4s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  100%{
+    background-position: 50% 0%;
+  }
+}

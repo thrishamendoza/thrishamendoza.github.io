@@ -1,23 +1,87 @@
 <!DOCTYPE html>
 
+<!-- YOU NEED TO INCLUDE THE FOLLOWING HTML SOMEWHERE IN YOUR DESIGN -->
+
+<!-- 
+<p class="attribution">
+  "<a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Erokia/sounds/516902">Ambient Wave 56 - (MSfxP7 - 78)</a>" by 
+  <a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Erokia">Erokia</a> is licensed under 
+  <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/?ref=openverse">CC BY-NC 4.0 
+    <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+    <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+  </a>. 
+</p> 
+-->
+
 <html lang="en">
-    
-    <head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
 
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrisha Media Player</title>
+    <!-- please add a favicon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="icons/note.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="playerControls.js" defer></script>
 
-        <title>boilerplate</title>
+  </head>
 
-    </head>
+  <body>
 
-    <body>
+    <h1>Music to relax or study to!</h1>
 
-    <h1>Thrisha :I</h1>
+    <!-- this element holds all of the media player -->
+    <div class="audio-player-wrapper">
+      <!-- this element holds the audio element and the overlay -->
+      <div class="audio-element-wrapper">
 
-    </body>
+        <!-- This is just an image placeholder, feel free to replace or not -->
+        <img id="heroImage" src="./bg-band.jpg" alt="">
+
+
+        <audio id="audioElement" controls>
+          <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/erokia_ambient-wave-56-msfxp7-78.mp3" type="audio/mp3">
+        </audio>
+
+        <img id="audioPlayOverlay" src="./icons/play.svg">
+
+        <img id="audioLoopOverlay" src="./icons/loop.svg">
+
+      </div>
+      <!-- this element holds all of the custom controls -->
+      <div class="audio-controls-wrapper" id="controlsWrapper">
+
+
+        <button class="audio-control-button" id="rewindButton"></button>
+        <button class="audio-control-button" id="playButton"></button>
+        <button class="audio-control-button" id="forwardButton"></button>
+
+        <button class="audio-control-button" id="muteButton"></button>
+
+      
+
+        <progress class="audio-progress-bar" id="progressBar" value="0"></progress>
+
+      </div>
+
+
+
+    </div>
+
+    <p class="attribution">
+      "<a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Erokia/sounds/516902">Ambient Wave 56 - (MSfxP7 - 78)</a>" by 
+      <a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Erokia">Erokia</a> is licensed under 
+      <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/?ref=openverse">CC BY-NC 4.0 
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+      </a>. 
+    </p> 
+
+  </body>
 
 </html>
