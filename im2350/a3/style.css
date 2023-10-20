@@ -1,0 +1,179 @@
+body {
+  background-image: url(/images/tree.jpeg);
+  background-position: center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* i had trouble deciding on whether to use a more handwritten, script font or a more corporate, robotic feel. The handwritten font was first chosen as
+it would have fit the plantlife and soft greenery that would be seen, however the contrasting background was already taking the soft appearance away from the site, 
+thus went for a sans serif font. 
+
+h1 {
+  text-align: center;
+  position: relative;
+  z-index: -2;
+  color: beige;
+}
+
+
+.backDoor
+{
+
+  width:157px;
+  height:322px;
+  margin: 0 auto;
+  margin-top: 28rem;
+  z-index: 5;
+}
+/* the door animation was created with the help of a simple tutorial using two background colours, i wanted to replace the solid colours with an image of a door, therefore
+i replaced the contained with a placeholder and matched the size up for the door i had opted for. That being the handdrawn, barn door to match with the greenhouse.
+i wanted the drawings to be as messy yet still able to be understood as to what the drawing was, to contrast the realistic background and plants within the greenhouse.
+i had thought of whether to make the site appear more creepy and unsettling despite the bright use of colours however i feel as though this design is something i can also be satisfied with.
+*/
+
+
+.door
+{
+  background-image: url(/images/door.png);
+  position: absolute;
+  top:505px;
+  width:157px;
+  height:322px;
+  margin: 0 auto;
+  cursor: pointer;
+
+ 
+  transform-origin: left;
+  transition: all 0.5s ease-in-out;
+}
+
+
+#house {
+  background-image: url(/images/greenhouse.png);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height:560px;
+  left: 30rem;
+  right: 20rem;
+  top: 15rem;
+  z-index: -2;
+}
+
+/*the positioning of the door and house is something that stumped me the most, I absolutely dislike having to resize and figure out the measurement of objects for websites
+and it may appear centered and aligned if you are on a specific screen (1920x1080) however any smaller or larger causes both the door and greenhouse to skew to the side.
+its one of the struggles i faced during this assignment which i really tried everything to fix, which is something id like to improve upon moving forward into other projects.
+*/
+
+#enterDoor {
+  background-color: #e3825175;
+  color: beige;
+  border: 0;
+  border-radius: 12px 12px;
+  top:600px;
+  width:157px;
+  height:322px;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#enterDoor:hover {
+  background-color: #e3825146;
+}
+
+
+img {
+  max-width: 30%;
+}
+
+#exterior {
+  display: block;
+}
+
+.interior {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+#inside {
+  display: none;
+
+}
+
+.plants {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding-top: 5%;
+}
+
+#left {
+  display: none;
+}
+
+
+#right {
+  display: none;
+}
+
+.btn {
+  background-color: #E38251;
+  border-radius: 12px;
+  width: 8rem;
+  font-size: 24px;
+  padding: 10px 10px;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  position:relative;
+  margin-top: 15rem;
+  
+
+}
+
+.btn:hover {
+  background-color: #9e5b39;
+
+}
+
+.bttn {
+  background-color: #E38251;
+  border-radius: 12px;
+  width: 8rem;
+  font-size: 24px;
+  padding: 10px 10px;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+#eout1 {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  position:relative;
+  margin-top: 12rem;
+}
+
+.doorOpen
+{
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+button {
+  cursor: pointer;
+}
+
+.plants img:hover{
+  cursor: pointer;
+}
+

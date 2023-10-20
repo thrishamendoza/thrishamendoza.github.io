@@ -7,17 +7,69 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
 
-        <title>boilerplate</title>
-
+        <title>julies plants</title>
+<!--the title pays homage to my mom who absolutely adores her plants and cares for them every single day, almost as if they
+were her own child. ive always taken appreaciation over the amount of effort she takes to water and ensure they live long lives, and im always stunned
+to discover just how large ehr knowledge of caring for certain plants are. a sweet lady caring for her sweet plants :)-->
     </head>
 
     <body>
 
-    <h1>Thrisha :I</h1>
+        <div id="exterior">
+            <h1>take a peek inside</h1>
+            <div class="backDoor" > 
+                <div class="door"> </div>
+                <button id="enterDoor" onclick="enterIn()">enter</button>
+            </div>
+        </div>
 
+        <div>
+            <div id="house"></div>
+        </div>
+
+        <div class="interior" id="inside">
+            <div class="plants">
+                <button class="btn" id="eleft" onclick="enterLeft()">left</button>
+                <img src="images/aloevera.png" id="aloe" onclick="toggleAloe()">
+                <img src="images/cactus.png" id="cactus" onclick="toggleCactus()">
+                <img src="images/anthclar.png" id="anthclar" onclick="toggleAnthclar()">
+                <button class="btn" id="eright" onclick="enterRight()">right</button>
+            </div>
+            <div>
+               <button class="bttn" id="eout1" onclick="enterOut()">back</button> 
+            </div>
+            <!--these onlick events were meant to be used to change the realistic plants into drawn versions, however as i discussed in the jscript page,
+            i had difficulties writing a functional code for more than one to run successfully, therefore i am leaving them here to further show my experimentation
+        this is probably another one of those things that can be rather simplified and organised in a much neater manner which i am totally aware of, however i just am not sure how
+    to go about it successfully :(. -->
+        </div>
+
+        <div class="interior" id="left">
+            <div class="plants">
+                <img src="images/jadeplant.png" id="jade" onclick="toggleJade()">
+                <img src="images/moneyplant.png" id="money" onclick="toggleMoney()">
+                <img src="images/monstera.png" id="monstera" onclick="toggleMonstera()">
+                <button class="btn" id="ein" onclick="enterInn()">back</button>
+            </div>
+        </div>
+    
+        <div class="interior" id="right">
+            <div class="plants">
+                <button class="btn" id="ein" onclick="enterInn()">back</button>
+                <img src="images/sansevieria.png" id="sans" onclick="toggleSans()">
+                <img src="images/spiderplant.png" id="spider" onclick="toggleSpider()">
+                <img src="images/orchids.png" id="orchid" onclick="toggleOrchid()">
+            </div>
+        </div>
     </body>
-
+<!--the use of floating plants was a creative choice i decided to keep as it closely resembled one of the sites and had looked into for inspiration and reasearch
+for this project, its slightly unsettling due to the many mixed media you see just on one page, but thats what i enjoy the most.
+its a sort of style that looks bad and good at thesame time, as if a child was working alongside an adult.-->
 </html>
