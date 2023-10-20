@@ -77,7 +77,8 @@ let money = document.getElementById("money");
 //the code did work, however the images were only being replaced for one plant whilst both were interactable.
 //this would result in clicking a middle plant and having the left side change to what the middle was supposed to be.
 
-money.onclick = function toggleMoney() {
+
+/* money.onclick = function toggleMoney() {
     var i = true;
     if(i){
         document.getElementById("money").src = 'images/moneyplant.png';
@@ -85,4 +86,7 @@ money.onclick = function toggleMoney() {
         document.getElementById("money").src = 'images/moneyplant2.png';
     }
 }
-
+*/
+money.onclick = function toggleMoney() {
+    money.src = 'images/moneyplant2.png'
+}
