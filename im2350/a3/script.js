@@ -36,6 +36,7 @@ function enterInn() {
 //i wanted to follow a more skeumorphic design hence the weirdly out of touch background with hand drawn interiors and realistic plants.
 //the idea was for all the plants to be interactable, and when clicked on they change into a more cartoonish and handrawn version of themselves.
 //however i had found this part to be quite difficult and only managed to get one plant working.
+
 function enterLeft() {
     document.getElementById("exterior").style.display = 'none';
     document.getElementById("inside").style.display = 'none';
@@ -68,6 +69,7 @@ image.onclick = function() {
 };
 
 let money = document.getElementById("money");
+
 //even though this code is unfortunately not working i will still keep this here as a way to show my trial and errors/experimentations
 //the toggle function is what stumped me as it seems you can only use it for one variable, therefore i tried using a different variable however it did not
 //work as id like it to.

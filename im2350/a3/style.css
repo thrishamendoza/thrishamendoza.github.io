@@ -8,7 +8,7 @@ body {
 
 /* i had trouble deciding on whether to use a more handwritten, script font or a more corporate, robotic feel. The handwritten font was first chosen as
 it would have fit the plantlife and soft greenery that would be seen, however the contrasting background was already taking the soft appearance away from the site, 
-thus went for a sans serif font. 
+thus went for a sans serif font. */
 
 h1 {
   text-align: center;
@@ -27,6 +27,9 @@ h1 {
   margin-top: 28rem;
   z-index: 5;
 }
+
+
+
 /* the door animation was created with the help of a simple tutorial using two background colours, i wanted to replace the solid colours with an image of a door, therefore
 i replaced the contained with a placeholder and matched the size up for the door i had opted for. That being the handdrawn, barn door to match with the greenhouse.
 i wanted the drawings to be as messy yet still able to be understood as to what the drawing was, to contrast the realistic background and plants within the greenhouse.
