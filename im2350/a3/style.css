@@ -1,5 +1,5 @@
 body {
-  background-image: url(/images/tree.jpeg);
+  background-image: url(images/tree.jpeg);
   background-position: center fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,7 +39,7 @@ i had thought of whether to make the site appear more creepy and unsettling desp
 
 .door
 {
-  background-image: url(/images/door.png);
+  background-image: url(images/door.png);
   position: absolute;
   top:505px;
   width:157px;
@@ -54,7 +54,7 @@ i had thought of whether to make the site appear more creepy and unsettling desp
 
 
 #house {
-  background-image: url(/images/greenhouse.png);
+  background-image: url(images/greenhouse.png);
   position: fixed;
   display: flex;
   justify-content: center;
